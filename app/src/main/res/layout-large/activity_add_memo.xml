@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:fab="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="13dp"
+                android:id="@+id/add_memo"
+                android:elevation="10dp">
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/image_full_view"
+                android:layout_width="fill_parent"
+                android:layout_height="280dp"
+                android:visibility="gone"
+                android:nestedScrollingEnabled="false"
+                android:layout_gravity="top"
+                android:focusable="false"
+                android:scaleType="centerCrop"/>
+
+
+            <EditText
+                android:id="@+id/memo_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/memo_title_hint"
+                android:maxLines="2"
+
+                android:textAppearance="@android:style/TextAppearance.Large"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:typeface="serif"
+                android:paddingTop="16dp"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <at.markushi.ui.CircleButton
+                    android:id="@+id/button_camera"
+                    android:layout_width="64dip"
+                    android:layout_height="64dip"
+                    app:cb_color="@color/background_floating_material_dark"
+                    app:cb_pressedRingWidth="8dip"
+                    android:src="@drawable/camera"
+                    android:cropToPadding="false"
+
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:layout_marginRight="4dp"-->
+                    <!-->-->
+
+                    <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="fill_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:orientation="horizontal">&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<ImageButton&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/memo_take_photo_button"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:src="@android:drawable/ic_menu_camera"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:background="#3d000000"/>&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<ImageButton&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/add_from_gallery_imageButton"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:src="@android:drawable/ic_menu_gallery"&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;android:background="#3d000000"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+
+                    <!--</LinearLayout>-->
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/audiolayout"
+                        android:layout_gravity="right">
+
+                        <!--<ToggleButton-->
+                        <!--android:layout_width="fill_parent"-->
+                        <!--android:layout_height="fill_parent"-->
+                        <!--android:id="@+id/audio_image_button"-->
+                        <!--android:baselineAlignBottom="false"-->
+                        <!--android:adjustViewBounds="false"-->
+                        <!--android:src="@android:drawable/ic_btn_speak_now"-->
+                        <!--android:textOff="REC"-->
+                        <!--android:textOn=".ING"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:textColor="@color/toggle_color"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textSize="14dp"-->
+                        <!--android:background="#30000000"-->
+                        <!--android:singleLine="false"/>-->
+
+                        <!--<com.dd.CircularProgressButton-->
+                        <!--android:layout_weight="0"-->
+                        <!--android:id="@+id/photo_button"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="16dp"-->
+                        <!--android:textColor="@color/cpb_white"-->
+                        <!--android:textSize="16sp"-->
+                        <!--app:cpb_textComplete="COMPLETE"-->
+                        <!--app:cpb_textError="Error"-->
+                        <!--app:cpb_textIdle="CAM"-->
+                        <!--android:layout_marginLeft="8dp"-->
+                        <!--android:layout_marginRight="8dp"-->
+                        <!--app:cpb_colorIndicator="@color/cpb_green"-->
+                        <!--app:cpb_colorIndicatorBackground="@color/cpb_red"-->
+                        <!--app:cpb_cornerRadius="6dp"-->
+                        <!--app:cpb_selectorIdle="@drawable/idle_state_selector_camera"-->
+                        <!--app:cpb_iconComplete="@drawable/camera"/>-->
+
+
+                        <com.dd.CircularProgressButton
+                            android:layout_weight="1"
+                            android:id="@+id/audio_image_button"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:textColor="@color/cpb_white"
+                            android:textSize="16sp"
+                            app:cpb_textComplete="COMPLETE"
+                            app:cpb_textError="Error"
+                            app:cpb_textIdle="RECORD"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            app:cpb_colorIndicator="@color/cpb_green"
+                            app:cpb_colorIndicatorBackground="@color/cpb_grey"
+                            app:cpb_cornerRadius="6dp"
+                            app:cpb_selectorIdle="@drawable/idle_state_selector"/>
+
+                        <com.dd.CircularProgressButton
+                            android:layout_weight="1"
+                            android:id="@+id/audio_play_button"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:cpb_textComplete="Complete"
+                            app:cpb_textError="Error"
+                            app:cpb_textIdle="Play"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            app:cpb_selectorIdle="@drawable/idle_state_selector_2"
+                            app:cpb_cornerRadius="6dp"
+                            />
+
+                        <!--<ImageButton-->
+                        <!--android:layout_width="fill_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:id="@+id/audio_play_button"-->
+                        <!--android:baselineAlignBottom="false"-->
+                        <!--android:adjustViewBounds="false"-->
+                        <!--android:src="@android:drawable/ic_media_play"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:background="#30000000"-->
+                        <!--/>-->
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="right"
+                        android:gravity="center_vertical|right">
+
+
+                        <!--<CheckBox-->
+
+                        <!--android:layout_weight="0"-->
+                        <!--android:id="@+id/events_done"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="@string/memo_is_done"-->
+                        <!--android:textSize="0dp"-->
+                        <!--/>-->
+
+                        <Button
+                            android:id="@+id/memo_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@android:drawable/ic_menu_my_calendar"
+                            android:background="@android:color/transparent"
+                            android:layout_gravity="right"
+
+                            android:layout_marginRight="20dp"/>
+
+
+                    </LinearLayout>
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="@string/IS_DONE"
+                        android:id="@+id/events_done"
+                        android:layout_weight="0"
+                        android:layout_gravity="right"
+                        android:textOn="Done!"
+                        android:textOff="NotYet"
+                        style="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/toggle_color"
+                        android:paddingRight="20dp"
+                        android:checked="true"
+                        android:paddingLeft="20dp"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/anchor"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText_content"
+                android:hint="@string/content_hint"
+                android:layout_gravity="center_horizontal"
+                android:typeface="serif"
+                android:paddingBottom="32dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp"
+                android:paddingRight="16dp"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <com.software.shell.fab.ActionButton
+        android:id="@+id/button_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        fab:button_color="#ffff0000"
+        fab:button_colorPressed="#ffb00000"
+        fab:image="@drawable/delete_button"
+
+
+        fab:show_animation="@anim/fab_roll_from_down"
+        fab:hide_animation="@anim/fab_roll_to_down"
+
+
+
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="30dp"
+        android:elevation="5dp"/>
+
+
+</RelativeLayout>

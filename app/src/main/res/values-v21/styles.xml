@@ -3,7 +3,6 @@
 
     <style name="AppTheme" parent="android:Theme.Material.Light">
         <!-- Main theme colors -->
-        <item name="android:windowActionBarOverlay">true</item>
         <!--   your app branding color for the app bar -->
     </style>
 </resources>

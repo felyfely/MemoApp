@@ -2,41 +2,20 @@ package leonproject.com.MemoColor;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 /**
- * Created by fudan on 3/23/15.
+ * Created by fudan on 3/30/15.
  */
-public class SquareImageView extends ImageView {
-//    public SquareImageView(Context context) {
-//        super(context);
-//    }
-//
-//    public SquareImageView(Context context, AttributeSet attrs) {
-//        super(context, attrs);
-//    }
-//
-//    public SquareImageView(Context context, AttributeSet attrs, int defStyle) {
-//        super(context, attrs, defStyle);
-//    }
-//
-//    @Override
-//    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-//        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-//
-//        int width = getMeasuredWidth();
-//        setMeasuredDimension(width, width);
-//    }
-
-
+public class DynamicLayout extends RelativeLayout {
 
     private double mHeightRatio;
 
-    public SquareImageView(Context context, AttributeSet attrs) {
+    public DynamicLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public SquareImageView(Context context) {
+    public DynamicLayout(Context context) {
         super(context);
     }
 
